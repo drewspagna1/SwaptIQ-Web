@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — SwaptIQ</title>
+<meta name="description" content="SwaptIQ's privacy policy: what data we collect, why, and how it's used.">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="content-page">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-700.png" alt="SwaptIQ">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="support.html">Support</a>
+      <a href="index.html#download" class="cta">Get the App</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Privacy Policy</h1>
+    </div>
+  </section>
+
+  <div class="legal">
+    <p class="updated">Last updated: July 2, 2026</p>
+
+    <p>This Privacy Policy explains what information SwaptIQ ("SwaptIQ," "we," "us") collects when you use the SwaptIQ iOS app, why we collect it, and how it's handled. SwaptIQ is built around a simple principle: we collect what's needed to run the app and nothing more, and we don't sell your data.</p>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>Account information</h3>
+    <p>When you create a SwaptIQ account, we collect the email address and password you provide. Authentication is handled by our backend provider (Supabase); we do not store your password in plain text.</p>
+
+    <h3>League and roster data</h3>
+    <p>When you connect a fantasy league (currently via a public Sleeper league ID), we retrieve publicly available roster, player, and league-settings data from that platform's API in order to display it in the app and evaluate trades. We do not access your Sleeper account credentials — Sleeper leagues are connected using a public league ID only.</p>
+
+    <h3>Trade data</h3>
+    <p>Trades you build and evaluate in the app — including the players, picks, and AI-generated analysis — are saved to your account so you can view your trade history and favorite past evaluations.</p>
+
+    <h3>Usage and diagnostic data</h3>
+    <p>We may collect basic technical information (such as app version, device type, and crash/error logs) to diagnose bugs and keep the app running reliably. This data is not used to build an advertising profile.</p>
+
+    <h2>2. How We Use Information</h2>
+    <ul>
+      <li>To create and maintain your account and sign you in securely.</li>
+      <li>To sync your connected leagues, rosters, and players.</li>
+      <li>To generate trade valuations and AI-powered trade analysis.</li>
+      <li>To save your trade history and favorites for later reference.</li>
+      <li>To diagnose bugs, monitor app stability, and improve the product.</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+    <p>SwaptIQ relies on a small number of third-party services to function:</p>
+    <ul>
+      <li><strong>Sleeper API</strong> — publicly accessible league, roster, and player data.</li>
+      <li><strong>Trade value data providers</strong> — third-party dynasty fantasy football value data (e.g., FantasyCalc), used to price players and picks. We cite these values directly in the app rather than obscuring them behind a proprietary score.</li>
+      <li><strong>Supabase</strong> — our backend provider for authentication and data storage.</li>
+      <li><strong>AI analysis provider</strong> — trade details and relevant roster context may be sent to a language model service to generate the plain-English trade breakdown shown in the app.</li>
+    </ul>
+    <p>Each of these providers processes data solely to provide their respective service to SwaptIQ and is not permitted to use it for their own advertising purposes.</p>
+
+    <div class="callout">
+      SwaptIQ does not use third-party advertising networks, does not sell your personal information, and does not share your data with data brokers.
+    </div>
+
+    <h2>4. Data Retention</h2>
+    <p>We retain your account information and trade history for as long as your account remains active. You can request deletion of your account and associated data at any time (see Section 7).</p>
+
+    <h2>5. Data Security</h2>
+    <p>We use industry-standard practices — including encrypted connections (HTTPS) and a managed authentication provider — to protect your information. No method of transmission or storage is 100% secure, and we can't guarantee absolute security.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>SwaptIQ is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+
+    <h2>7. Your Choices and Rights</h2>
+    <ul>
+      <li><strong>Access &amp; correction:</strong> You can view and update your account details in-app.</li>
+      <li><strong>Deletion:</strong> You can request deletion of your account and all associated data by contacting us at the email below.</li>
+      <li><strong>Disconnecting leagues:</strong> You can disconnect a connected league at any time in Settings.</li>
+    </ul>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. If we make material changes, we'll update the "Last updated" date above and, where appropriate, notify you in the app.</p>
+
+    <h2>9. Contact Us</h2>
+    <p>Questions about this Privacy Policy or your data? Email <a href="mailto:drew.spagna@gmail.com">drew.spagna@gmail.com</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="assets/logo-700.png" alt="SwaptIQ">
+      <span>© <span id="year"></span> SwaptIQ</span>
+    </div>
+    <div class="footer-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
