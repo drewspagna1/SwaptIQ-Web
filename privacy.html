@@ -33,7 +33,7 @@
   </section>
 
   <div class="legal">
-    <p class="updated">Last updated: August 27, 2026</p>
+    <p class="updated">Last updated: September 3, 2026</p>
 
     <p>This Privacy Policy explains what information SwaptIQ ("SwaptIQ," "we," "us") collects when you use the SwaptIQ iOS app, why we collect it, and how it's handled. SwaptIQ is built around a simple principle: we collect what's needed to run the app and nothing more, and we don't sell your data.</p>
 
@@ -44,7 +44,11 @@
 
     <h3>League and roster data</h3>
     <p>When you connect a Sleeper league, we retrieve publicly available roster, player, and league-settings data from Sleeper's API in order to display it in the app and evaluate trades. We do not access your Sleeper account credentials — Sleeper leagues are connected using a public league ID only.</p>
+    <p>Fleaflicker leagues work the same way: you provide a public league ID, and we retrieve publicly available roster, player, draft, and league-settings data from Fleaflicker's API to display it and evaluate trades. We never access your Fleaflicker account credentials.</p>
     <p>When you connect a Yahoo Fantasy league (available to users in the US and Canada), you sign in directly through Yahoo's own official authorization screen. SwaptIQ never sees or stores your Yahoo password. Once connected, we read your Yahoo roster and league data live, each time you use the feature, in order to display it and evaluate trades — Yahoo roster data is not cached or stored by SwaptIQ. If a trade you save was built using Yahoo league data, that saved trade and its AI analysis are automatically deleted after 30 days, per our data agreement with Yahoo. You can disconnect your Yahoo account in the app at any time, which revokes SwaptIQ's access.</p>
+
+    <h3>Baseball player data</h3>
+    <p>When you build an MLB trade, SwaptIQ retrieves publicly available player and statistical data from Major League Baseball's public data services to price players. No account connection or league import is involved, and no personal information is sent to those services.</p>
 
     <h3>Trade data</h3>
     <p>Trades you build and evaluate in the app — including the players, picks, and AI-generated analysis — are saved to your account so you can view your trade history and favorite past evaluations.</p>
@@ -65,7 +69,9 @@
     <p>SwaptIQ relies on a small number of third-party services to function:</p>
     <ul>
       <li><strong>Sleeper API</strong> — publicly accessible league, roster, and player data.</li>
+      <li><strong>Fleaflicker API</strong> — publicly accessible league, roster, draft, and player data, retrieved with a public league ID.</li>
       <li><strong>Yahoo Fantasy Sports API</strong> — used to let you sign in with Yahoo and read your Yahoo league, roster, and player data, for users in the US and Canada. Fantasy data provided by Yahoo Fantasy. Yahoo data is read live and not cached or stored, and any saved trade built from Yahoo data is deleted within 30 days (see above).</li>
+      <li><strong>MLB public data services</strong> — publicly available player and statistical data used to price baseball players.</li>
       <li><strong>Trade value data providers</strong> — third-party dynasty fantasy football value data (e.g., FantasyCalc), used to price players and picks. We cite these values directly in the app rather than obscuring them behind a proprietary score.</li>
       <li><strong>Supabase</strong> — our backend provider for authentication and data storage.</li>
       <li><strong>AI analysis provider</strong> — trade details and relevant roster context may be sent to a language model service to generate the plain-English trade breakdown shown in the app.</li>
