@@ -7,16 +7,35 @@
 <meta name="description" content="SwaptIQ's privacy policy: what data we collect, why, and how it's used.">
 <link rel="icon" type="image/png" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#05091d">
+<link rel="canonical" href="https://swaptiq.app/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SwaptIQ">
+<meta property="og:title" content="Privacy Policy — SwaptIQ">
+<meta property="og:description" content="What data SwaptIQ collects, why, and how it is handled.">
+<meta property="og:url" content="https://swaptiq.app/privacy.html">
+<meta property="og:image" content="https://swaptiq.app/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://swaptiq.app/assets/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;750&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="content-page">
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <img src="assets/logo-700.png" alt="SwaptIQ">
+      <img src="assets/logo-700.png" alt="SwaptIQ" width="140" height="24">
     </a>
-    <nav class="nav-links">
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="nav-links" id="nav-links">
       <a href="index.html#features">Features</a>
       <a href="index.html#how-it-works">How It Works</a>
       <a href="support.html">Support</a>
@@ -25,10 +44,11 @@
   </div>
 </header>
 
-<main>
-  <section class="hero">
+<main id="main">
+  <section class="page-head">
     <div class="wrap">
       <h1>Privacy Policy</h1>
+      <p>What SwaptIQ collects, why it collects it, and what it never does with your data.</p>
     </div>
   </section>
 
@@ -43,15 +63,15 @@
     <p>When you create a SwaptIQ account, we collect the email address and password you provide. Authentication is handled by our backend provider (Supabase); we do not store your password in plain text.</p>
 
     <h3>League and roster data</h3>
-    <p>When you connect a Sleeper league, we retrieve publicly available roster, player, and league-settings data from Sleeper's API in order to display it in the app and evaluate trades. We do not access your Sleeper account credentials — Sleeper leagues are connected using a public league ID only.</p>
+    <p>When you connect a Sleeper league, we retrieve publicly available roster, player, and league-settings data from Sleeper's API in order to display it in the app and evaluate trades. We do not access your Sleeper account credentials. Sleeper leagues are connected using a public league ID only.</p>
     <p>Fleaflicker leagues work the same way: you provide a public league ID, and we retrieve publicly available roster, player, draft, and league-settings data from Fleaflicker's API to display it and evaluate trades. We never access your Fleaflicker account credentials.</p>
-    <p>When you connect a Yahoo Fantasy league (available to users in the US and Canada), you sign in directly through Yahoo's own official authorization screen. SwaptIQ never sees or stores your Yahoo password. Once connected, we read your Yahoo roster and league data live, each time you use the feature, in order to display it and evaluate trades — Yahoo roster data is not cached or stored by SwaptIQ. If a trade you save was built using Yahoo league data, that saved trade and its AI analysis are automatically deleted after 30 days, per our data agreement with Yahoo. You can disconnect your Yahoo account in the app at any time, which revokes SwaptIQ's access.</p>
+    <p>When you connect a Yahoo Fantasy league (available to users in the US and Canada), you sign in directly through Yahoo's own official authorization screen. SwaptIQ never sees or stores your Yahoo password. Once connected, we read your Yahoo roster and league data live, each time you use the feature, in order to display it and evaluate trades. Yahoo roster data is not cached or stored by SwaptIQ. If a trade you save was built using Yahoo league data, that saved trade and its AI analysis are automatically deleted after 30 days, per our data agreement with Yahoo. You can disconnect your Yahoo account in the app at any time, which revokes SwaptIQ's access.</p>
 
     <h3>Baseball player data</h3>
     <p>When you build an MLB trade, SwaptIQ retrieves publicly available player and statistical data from Major League Baseball's public data services to price players. No account connection or league import is involved, and no personal information is sent to those services.</p>
 
     <h3>Trade data</h3>
-    <p>Trades you build and evaluate in the app — including the players, picks, and AI-generated analysis — are saved to your account so you can view your trade history and favorite past evaluations.</p>
+    <p>Trades you build and evaluate in the app, including the players, picks, and AI-generated analysis, are saved to your account so you can view your trade history and favorite past evaluations.</p>
 
     <h3>Usage and diagnostic data</h3>
     <p>We may collect basic technical information (such as app version, device type, and crash/error logs) to diagnose bugs and keep the app running reliably. This data is not used to build an advertising profile.</p>
@@ -68,13 +88,13 @@
     <h2>3. Third-Party Services</h2>
     <p>SwaptIQ relies on a small number of third-party services to function:</p>
     <ul>
-      <li><strong>Sleeper API</strong> — publicly accessible league, roster, and player data.</li>
-      <li><strong>Fleaflicker API</strong> — publicly accessible league, roster, draft, and player data, retrieved with a public league ID.</li>
-      <li><strong>Yahoo Fantasy Sports API</strong> — used to let you sign in with Yahoo and read your Yahoo league, roster, and player data, for users in the US and Canada. Fantasy data provided by Yahoo Fantasy. Yahoo data is read live and not cached or stored, and any saved trade built from Yahoo data is deleted within 30 days (see above).</li>
-      <li><strong>MLB public data services</strong> — publicly available player and statistical data used to price baseball players.</li>
-      <li><strong>Trade value data providers</strong> — third-party dynasty fantasy football value data (e.g., FantasyCalc), used to price players and picks. We cite these values directly in the app rather than obscuring them behind a proprietary score.</li>
-      <li><strong>Supabase</strong> — our backend provider for authentication and data storage.</li>
-      <li><strong>AI analysis provider</strong> — trade details and relevant roster context may be sent to a language model service to generate the plain-English trade breakdown shown in the app.</li>
+      <li><strong>Sleeper API</strong>, publicly accessible league, roster, and player data.</li>
+      <li><strong>Fleaflicker API</strong>, publicly accessible league, roster, draft, and player data, retrieved with a public league ID.</li>
+      <li><strong>Yahoo Fantasy Sports API</strong>, used to let you sign in with Yahoo and read your Yahoo league, roster, and player data, for users in the US and Canada. Fantasy data provided by Yahoo Fantasy. Yahoo data is read live and not cached or stored, and any saved trade built from Yahoo data is deleted within 30 days (see above).</li>
+      <li><strong>MLB public data services</strong>, publicly available player and statistical data used to price baseball players.</li>
+      <li><strong>Trade value data providers</strong>, third-party dynasty fantasy football value data (e.g., FantasyCalc), used to price players and picks. We cite these values directly in the app rather than obscuring them behind a proprietary score.</li>
+      <li><strong>Supabase</strong>, our backend provider for authentication and data storage.</li>
+      <li><strong>AI analysis provider</strong>, trade details and relevant roster context may be sent to a language model service to generate the plain-English trade breakdown shown in the app.</li>
     </ul>
     <p>Each of these providers processes data solely to provide their respective service to SwaptIQ and is not permitted to use it for their own advertising purposes.</p>
 
@@ -87,7 +107,7 @@
     <p>Trades and AI analyses built using Yahoo league data are the exception: those are automatically and permanently deleted no later than 30 days after they're saved, regardless of whether your account stays active, per our data agreement with Yahoo. The app shows this expiration on the trade itself.</p>
 
     <h2>5. Data Security</h2>
-    <p>We use industry-standard practices — including encrypted connections (HTTPS) and a managed authentication provider — to protect your information. No method of transmission or storage is 100% secure, and we can't guarantee absolute security.</p>
+    <p>We use industry-standard practices, including encrypted connections (HTTPS) and a managed authentication provider, to protect your information. No method of transmission or storage is 100% secure, and we can't guarantee absolute security.</p>
 
     <h2>6. Children's Privacy</h2>
     <p>SwaptIQ is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
@@ -118,9 +138,34 @@
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Use</a>
     </div>
+    <p class="footer-copy">SwaptIQ is an independent app and is not affiliated with, endorsed by, or sponsored by Sleeper, Yahoo, Fleaflicker, ESPN, the NFL, MLB, or any of their affiliates. All team names, player names, and logos are the property of their respective owners.</p>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  (function () {
+    var toggle = document.querySelector('.menu-toggle');
+    var nav = document.getElementById('nav-links');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          nav.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+    var header = document.querySelector('.site-header');
+    if (header) {
+      var onScroll = function () { header.classList.toggle('is-stuck', window.scrollY > 8); };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+  })();
+</script>
 </body>
 </html>

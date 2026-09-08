@@ -7,16 +7,35 @@
 <meta name="description" content="Terms of Use for the SwaptIQ app.">
 <link rel="icon" type="image/png" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#05091d">
+<link rel="canonical" href="https://swaptiq.app/terms.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SwaptIQ">
+<meta property="og:title" content="Terms of Use — SwaptIQ">
+<meta property="og:description" content="The terms that govern your use of the SwaptIQ app.">
+<meta property="og:url" content="https://swaptiq.app/terms.html">
+<meta property="og:image" content="https://swaptiq.app/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://swaptiq.app/assets/og-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;750&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="content-page">
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <img src="assets/logo-700.png" alt="SwaptIQ">
+      <img src="assets/logo-700.png" alt="SwaptIQ" width="140" height="24">
     </a>
-    <nav class="nav-links">
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="nav-links" id="nav-links">
       <a href="index.html#features">Features</a>
       <a href="index.html#how-it-works">How It Works</a>
       <a href="support.html">Support</a>
@@ -25,10 +44,11 @@
   </div>
 </header>
 
-<main>
-  <section class="hero">
+<main id="main">
+  <section class="page-head">
     <div class="wrap">
       <h1>Terms of Use</h1>
+      <p>The agreement that covers your use of the SwaptIQ app.</p>
     </div>
   </section>
 
@@ -38,7 +58,7 @@
     <p>These Terms of Use ("Terms") govern your use of the SwaptIQ iOS application ("SwaptIQ," "the App," "we," "us"). By downloading, accessing, or using SwaptIQ, you agree to these Terms. If you don't agree, please don't use the App.</p>
 
     <h2>1. What SwaptIQ Is</h2>
-    <p>SwaptIQ is a tool for fantasy sports managers to connect supported fantasy platforms (currently Sleeper, Fleaflicker, and — for users in the US and Canada — Yahoo Fantasy), build proposed trades, and receive an AI-generated analysis of trade value based on third-party value data. SwaptIQ covers fantasy football and fantasy baseball. SwaptIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Sleeper, Yahoo, Fleaflicker, FantasyCalc, the NFL, MLB, or any fantasy sports platform or league referenced in the App.</p>
+    <p>SwaptIQ is a tool for fantasy sports managers to connect supported fantasy platforms (currently Sleeper, Fleaflicker, and, for users in the US and Canada, Yahoo Fantasy), build proposed trades, and receive an AI-generated analysis of trade value based on third-party value data. SwaptIQ covers fantasy football and fantasy baseball. SwaptIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Sleeper, Yahoo, Fleaflicker, FantasyCalc, the NFL, MLB, or any fantasy sports platform or league referenced in the App.</p>
 
     <h2>2. Not Financial, Professional, or Guaranteed Advice</h2>
     <div class="callout">
@@ -68,7 +88,7 @@
     <p>SwaptIQ is provided "as is" and "as available," without warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the App will be uninterrupted, error-free, or that trade analyses will be accurate or complete.</p>
 
     <h2>8. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, SwaptIQ and its developer will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, arising from your use of, or inability to use, the App — including decisions made based on trade analysis shown in the App.</p>
+    <p>To the fullest extent permitted by law, SwaptIQ and its developer will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, arising from your use of, or inability to use, the App, including decisions made based on trade analysis shown in the App.</p>
 
     <h2>9. Changes to the App or These Terms</h2>
     <p>We may update, modify, or discontinue features of SwaptIQ at any time. We may also update these Terms; if we make material changes, we'll update the "Last updated" date above. Continued use of the App after changes take effect constitutes acceptance of the updated Terms.</p>
@@ -95,9 +115,34 @@
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Use</a>
     </div>
+    <p class="footer-copy">SwaptIQ is an independent app and is not affiliated with, endorsed by, or sponsored by Sleeper, Yahoo, Fleaflicker, ESPN, the NFL, MLB, or any of their affiliates. All team names, player names, and logos are the property of their respective owners.</p>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  (function () {
+    var toggle = document.querySelector('.menu-toggle');
+    var nav = document.getElementById('nav-links');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          nav.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+    var header = document.querySelector('.site-header');
+    if (header) {
+      var onScroll = function () { header.classList.toggle('is-stuck', window.scrollY > 8); };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+  })();
+</script>
 </body>
 </html>
